@@ -1,0 +1,18 @@
+<mat-card>
+<div [ngClass]="{'list-group-item':true, done: todoIsDone, doing: todoIsDoing}"> 
+    <label>{{ todoTitle }}</label>
+    <label>{{ todoDate | date : "dd.MM.y" }}</label>
+    <span>
+        <label>Done?</label>
+        <input type="checkbox" class="checkbox" [(ngModel)]=this.todoIsDone>
+    </span>
+    <span>
+        <label>Doing?</label>
+        <input type="checkbox" class="checkbox" [(ngModel)]=this.todoIsDoing>
+    </span>
+
+    <!--Update-Modal / Delete-Modal-->
+    <update-modal [todo]="todo"></update-modal>
+    <delete-modal [todo]="todo"></delete-modal>
+</div>
+</mat-card>

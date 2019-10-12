@@ -1,0 +1,39 @@
+<div class="top-input-nav row">
+  <div class="input-container col-sm">
+    <input
+      type="text"
+      class="todo-input col-sm"
+      placeholder="Add next todo here"
+      [(ngModel)]="todoTitle"
+      (keyup.enter)="addTodo()"
+    />
+    <span class="dropright">Press Enter</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm">
+      <h2>New Todo Items</h2>
+    <ul>
+      <li *ngFor="let todo of newTodoList">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm">
+      <h2>Doing</h2>
+    <ul>
+      <li *ngFor="let todo of doingTodoList">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm">
+      <h2>Done!</h2>
+    <ul>
+      <li *ngFor="let todo of doneTodoList">
+        <app-todo-item [todo]="todo"></app-todo-item>
+      </li>
+    </ul>
+  </div>
+</div>

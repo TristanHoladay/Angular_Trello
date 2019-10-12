@@ -1,0 +1,27 @@
+.checkbox {
+    margin-left: 5px;
+}
+
+label {
+    margin: 0 0 0 5em;
+}
+
+.done {
+    background-color: rgba(0, 128, 0, 0.842);
+}
+
+.doing {
+    background-color: yellow;
+}
+
+.undone {
+    background-color: rgba(255, 0, 0, 0.685);
+}
+
+.date {
+    margin-right: 3em;
+}
+
+.displayBtn {
+    margin: .2em .3em;
+}

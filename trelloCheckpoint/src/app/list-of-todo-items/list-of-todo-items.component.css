@@ -1,0 +1,53 @@
+.isDoneCheck {
+    margin-left: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+label {
+    margin: 0 0 0 5em;
+}
+
+.done {
+    background-color: rgba(0, 128, 0, 0.842);
+}
+
+.undone {
+    background-color: rgba(255, 0, 0, 0.685);
+}
+
+.date {
+    margin-right: 3em;
+}
+
+.top-input-nav {
+    width: 100%;
+    height: auto;
+    border: 2px solid blue;
+}
+
+.input-container {
+    margin-top: .5em;
+}
+
+.todo-input {
+    width: 40%;
+}
+
+#statusDisplayChoice {
+    display: flexbox;
+    justify-content: center;
+}
+
+.displayBtn {
+    margin: .2em .3em;
+}
+
+.empty-list {
+    display: block;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+}
