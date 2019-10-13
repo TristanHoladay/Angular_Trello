@@ -1,20 +1,24 @@
 <mat-card>
-<div [ngClass]="{'list-group-item':true, done: todoIsDone, doing: todoIsDoing}" class="card-content-container"> 
+<div [ngClass]="{'list-group-item':true, done: todo.isDone, doing: todo.isDoing}" class="card-content-container"> 
     <div id="todo-title">
-        <h3>{{ todoTitle }}</h3>
+        <h3>{{ todo.title }}</h3>
     </div>
     <div>
         <span><mark>Date of Creation: </mark></span>
-        <label>{{ todoDate | date : "MM.dd.y" }}</label>
+        <label>{{ todo.date | date : "MM.dd.y" }}</label>
+    </div>
+    <div>
+        <span><mark>Due Date: </mark></span>
+        <label>{{ todo.dueDate }}</label>
     </div>
     
     <span>
         <label>Done?</label>
-        <input type="checkbox" class="checkbox" [(ngModel)]=this.todoIsDone>
+        <input type="checkbox" class="checkbox" [(ngModel)]=todo.isDone (change)="doubleStatusCheck()">
     </span>
     <span>
         <label id="doing">Doing?</label>
-        <input type="checkbox" class="checkbox" [(ngModel)]=this.todoIsDoing>
+        <input type="checkbox" class="checkbox" [(ngModel)]=todo.isDoing (change)="doubleStatusCheck()">
     </span>
 
     <!--Update-Modal / Delete-Modal-->

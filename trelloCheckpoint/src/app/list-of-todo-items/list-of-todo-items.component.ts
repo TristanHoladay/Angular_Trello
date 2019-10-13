@@ -19,16 +19,16 @@ export class ListOfTodoItemsComponent implements OnInit {
   }
 
   get newTodoList() {
-    return this.todoService.getAllTodos();
+    return this.todoService.todoList.filter(x => (!x.isDone && !x.isDoing) || (x.isDone && x.isDoing));
   }
 
   get doingTodoList() {
-    var doingList = this.todoService.todoList.filter(x => x.isDoing);
+    var doingList = this.todoService.todoList.filter(x => x.isDoing && !x.isDone);
     return doingList;
   }
 
   get doneTodoList() {
-    var doneList = this.todoService.todoList.filter(x => x.isDoing && !x.isDone);
+    var doneList = this.todoService.todoList.filter(x => !x.isDoing && x.isDone);
     return doneList;
   }
 
@@ -40,9 +40,12 @@ export class ListOfTodoItemsComponent implements OnInit {
       isDone: false,
       isDoing: false,
       date: new Date(),
+      dueDate: 'Add Due Date'
     });
 
     this.todoTitle = '';
   }
+
+  
 
 }

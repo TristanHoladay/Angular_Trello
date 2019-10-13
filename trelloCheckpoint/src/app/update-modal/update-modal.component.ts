@@ -10,7 +10,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class UpdateModalComponent implements OnInit {
   todoTitle: string = '';
-  todoDate: Date;
+  todoDueDate: string = '';
 
   @Input() todo: ITodo;
   closeResult: string;
@@ -20,9 +20,14 @@ export class UpdateModalComponent implements OnInit {
   ngOnInit() {}
 
   updateTodo(todo: ITodo) {
-    todo.title = this.todoTitle;
-    todo.date = this.todoDate;
-    this.todoService.updateTodo(todo);
+    if(this.todoTitle.length != 0) {
+      todo.title = this.todoTitle;
+    }
+    
+    if(this.todoDueDate.length != 0) {
+      todo.dueDate = this.todoDueDate;
+    }
+    //this.todoService.updateTodo(todo);
   }
 
   open(content) {

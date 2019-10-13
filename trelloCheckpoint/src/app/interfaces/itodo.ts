@@ -4,4 +4,5 @@ export interface ITodo {
     isDone: boolean;
     isDoing: boolean;
     date: Date;
+    dueDate: string;
 }

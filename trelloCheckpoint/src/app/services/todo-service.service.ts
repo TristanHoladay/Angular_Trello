@@ -11,7 +11,8 @@ export class TodoService {
       title: "Create Trello App",
       isDone: false,
       isDoing: false,
-      date: new Date()
+      date: new Date(),
+      dueDate: '10.15.19'
     }
   ];
 
@@ -29,7 +30,8 @@ export class TodoService {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);
     this.todoList.splice(index, 1)
   }
-
+  
+/*
   updateTodo(todo: ITodo) {
     const index = this.todoList.findIndex(x => x.id === todo.id);
     var todoItem = this.todoList[index];
@@ -37,6 +39,6 @@ export class TodoService {
     todoItem.date = todo.date;
   }
 
-  //filter methods here?
+ */
 
 }
