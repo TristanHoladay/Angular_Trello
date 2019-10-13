@@ -6,9 +6,6 @@ ul {
     list-style: none;
 }
 
-label {
-    margin: 0 0 0 5em;
-}
 
 .done {
     background-color: rgba(0, 128, 0, 0.842);
@@ -18,9 +15,6 @@ label {
     background-color: rgba(255, 0, 0, 0.685);
 }
 
-.date {
-    margin-right: 3em;
-}
 
 .top-input-nav {
     width: 100%;
@@ -29,11 +23,23 @@ label {
 }
 
 .input-container {
+    width: 100%;
     margin-top: .5em;
 }
 
 .todo-input {
+    margin: 0 0 .3em 2em;
     width: 40%;
+}
+
+.lane-container {
+    margin: 0 1em;
+    box-sizing: border-box;
+}
+
+
+li {
+    margin-right: 3em;
 }
 
 #statusDisplayChoice {

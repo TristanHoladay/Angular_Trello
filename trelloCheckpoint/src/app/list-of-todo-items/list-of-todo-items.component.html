@@ -1,8 +1,8 @@
-<div class="top-input-nav row">
-  <div class="input-container col-sm">
+<div class="top-input-nav">
+  <div class="input-container">
     <input
       type="text"
-      class="todo-input col-sm"
+      class="todo-input"
       placeholder="Add next todo here"
       [(ngModel)]="todoTitle"
       (keyup.enter)="addTodo()"
@@ -11,8 +11,8 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm">
+<div class="row lane-container">
+  <div class="col-sm border border-primary">
       <h2>New Todo Items</h2>
     <ul>
       <li *ngFor="let todo of newTodoList">
@@ -20,7 +20,7 @@
       </li>
     </ul>
   </div>
-  <div class="col-sm">
+  <div class="col-sm border border-warning">
       <h2>Doing</h2>
     <ul>
       <li *ngFor="let todo of doingTodoList">
@@ -28,7 +28,7 @@
       </li>
     </ul>
   </div>
-  <div class="col-sm">
+  <div class="col-sm border border-success">
       <h2>Done!</h2>
     <ul>
       <li *ngFor="let todo of doneTodoList">

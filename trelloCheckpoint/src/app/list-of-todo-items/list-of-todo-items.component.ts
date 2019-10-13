@@ -12,8 +12,6 @@ export class ListOfTodoItemsComponent implements OnInit {
   todoTitle: string = '';
   todoList: ITodo[] = [];
 
-  
-
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {

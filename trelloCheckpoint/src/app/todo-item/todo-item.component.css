@@ -1,10 +1,23 @@
+.card-content-container {
+    display: flexbox;
+    justify-items: start;
+    justify-content: start;
+    border: 1px solid black;
+}
+
+#todo-title {
+    display: flex;
+    justify-content: center;
+}
+
+#doing {
+    margin-left: 2em;
+}
+
 .checkbox {
     margin-left: 5px;
 }
 
-label {
-    margin: 0 0 0 5em;
-}
 
 .done {
     background-color: rgba(0, 128, 0, 0.842);
@@ -24,4 +37,9 @@ label {
 
 .displayBtn {
     margin: .2em .3em;
+}
+
+.modals{
+    margin: 0 0 0 1em;
+    display: inline-block;
 }
